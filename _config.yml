@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "M. Bilgehan Ertan"
 title_separator          : "-"
 name                     : &name "M. Bilgehan Ertan"
-description              : &description "I am Murat Bilgehan Ertan, a passionate Computer Security specialist currently pursuing my MSc at Vrije Universiteit Amsterdam. I hold a BSc in Computer Science and Engineering from Sabanci University, Turkiye. My academic and professional journey has equipped me with a strong foundation in computer science and practical experience in computer security. I am currently focused on privacy in machine learning."
+description              : &description "I am Murat Bilgehan Ertan, a passionate Computer Security specialist currently pursuing my PhD at CWI, Amsterdam on Security and Machine Learning. I hold a BSc in Computer Science and Engineering from Sabanci University, Turkiye. As well as a MSc in Computer Security from Vrije Universiteit Amsterdam. My academic and professional journey has equipped me with a strong foundation in computer science and practical experience in computer security. I am currently focused on security and privacy in machine learning."
 url                      : https://bilgehanertan.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "bilgehanertan/bilgehanertan.github.io"
@@ -22,9 +22,9 @@ author:
   # Biographic information
   avatar           : "profile.jpg"
   name             : "M. Bilgehan Ertan"
-  bio              : "Computer Security MSc. Student @ VU Amsterdam & Security Researcher @ PRODAFT"
+  bio              : "Security & Machine Learning PhD Student @ CWI, Amsterdam"
   location         : "Amsterdam, Netherlands"
-  email            : "m.b.ertan@student.vu.nl" 
+  email            : "bilgehan.ertan@cwi.nl" 
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
