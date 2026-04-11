@@ -10,6 +10,7 @@ paperurl: 'https://arxiv.org/abs/2603.10969'
 
 Submitted to a conference. TOSSS is a CVE-based software security benchmark designed to evaluate the capabilities of large language models in identifying and reasoning about software vulnerabilities.
 
+{% raw %}
 ```
 @article{damie2026tosss,
   author       = {Marc Damie and Murat Bilgehan Ertan and Domenico Essoussi and Angela Makhanu and Ga\"{e}tan Peter and Roos Wensveen},
@@ -23,3 +24,4 @@ Submitted to a conference. TOSSS is a CVE-based software security benchmark desi
   eprint       = {2603.10969}
 }
 ```
+{% endraw %}
