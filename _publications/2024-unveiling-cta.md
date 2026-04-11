@@ -2,7 +2,7 @@
 title: "Unveiling Cyber Threat Actors: A Hybrid Deep Learning Approach for Behavior-based Attribution"
 collection: publications
 permalink: /publication/2024-unveiling-cta
-excerpt: 'Developed a hybrid deep learning approach for behavior-based threat actor attribution, employing natural language processing and machine learning.'
+excerpt: 'Equal contribution. Developed a hybrid deep learning approach for behavior-based threat actor attribution, employing natural language processing and machine learning.'
 date: 2024-07-02
 venue: 'ACM Journal: Digital Threats: Research and Practice (DTRAP)'
 paperurl: 'https://doi.org/10.1145/3676284'

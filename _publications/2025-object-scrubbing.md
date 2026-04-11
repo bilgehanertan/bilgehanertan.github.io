@@ -3,8 +3,8 @@ title: "Beyond Anonymization: Object Scrubbing for Privacy-Preserving 2D and 3D 
 collection: publications
 permalink: /publication/2025-object-scrubbing
 excerpt: 'Introduced ROAR, a scalable privacy-preserving framework that removes sensitive objects using segmentation and generative inpainting while preserving dataset utility for 2D and 3D vision tasks.'
-date: 2025-04-23
-venue: 'arXiv preprint'
+date: 2025-03-01
+venue: "Master's Thesis, Vrije Universiteit Amsterdam (Grade: 10/10)"
 paperurl: 'https://arxiv.org/abs/2504.16557'
 ---
 
