@@ -2,9 +2,9 @@
 title: "Fundamental Limitations of Favorable Privacy–Utility Guarantees for DP-SGD"
 collection: publications
 permalink: /publication/2026-dp-sgd-limitations
-excerpt: 'Established fundamental limitations on the privacy-utility trade-offs achievable by DP-SGD, providing theoretical bounds on favorable guarantees.'
+excerpt: 'Accepted at ACM CCS 2026. Established fundamental limitations on the privacy-utility trade-offs achievable by DP-SGD, providing theoretical bounds on favorable guarantees.'
 date: 2026-01-01
-venue: 'ACM Conference on Computer and Communications Security (CCS 2026)'
+venue: '(Accepted) ACM Conference on Computer and Communications Security (CCS 2026)'
 paperurl: 'https://arxiv.org/abs/2601.10237'
 ---
 
