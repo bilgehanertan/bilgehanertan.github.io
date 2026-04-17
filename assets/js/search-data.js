@@ -30,7 +30,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "teachings-teaching-assistant-secure-programming",
+        },{id: "teachings-guest-lecture-data-protection-technologies-course-university-of-amsterdam",
+          title: 'Guest Lecture - Data Protection Technologies Course @ University of Amsterdam',
+          description: "Master&#39;s-level course at University of Amsterdam",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/data-protection-uva/";
+            },},{id: "teachings-teaching-assistant-secure-programming",
           title: 'Teaching Assistant - Secure Programming',
           description: "Undergraduate course at VU Amsterdam",
           section: "Teachings",handler: () => {
