@@ -1,6 +1,35 @@
 ---
 ---
 
+@article{ertan2026paczero,
+  abbr         = {Preprint},
+  bibtex_show  = {true},
+  selected     = {true},
+  author       = {Murat Bilgehan Ertan and Xiaochen Zhu and Phuong Ha Nguyen and {van Dijk}, Marten and Srinivas Devadas},
+  title        = {{PACZero}: {PAC}-Private Fine-Tuning of Language Models via Sign Quantization},
+  journal      = {CoRR},
+  volume       = {abs/2605.06505},
+  year         = {2026},
+  abstract     = {We introduce PACZero, a suite of PAC-private zeroth-order mechanisms for fine-tuning large language models that delivers usable utility at I(S*; Y_{1:T}) = 0, providing membership-inference resistance comparable to differential privacy only at extreme noise levels. The key idea is to sign-quantize subset-aggregated zeroth-order gradients to induce frequent unanimity—instances where candidate subsets agree on update directions—which incurs zero conditional mutual information cost. Two variants balance the privacy-utility spectrum: PACZero-MI (budgeted mutual information) and PACZero-ZPL (zero mutual information through randomized disagreement handling). Experiments on SST-2 and SQuAD with OPT models demonstrate competitive performance in high-privacy regimes where prior methods struggle.},
+  arxiv        = {2605.06505},
+  html         = {https://arxiv.org/abs/2605.06505},
+  doi          = {10.48550/ARXIV.2605.06505}
+}
+
+@article{vandijk2026tradeoff,
+  abbr         = {Preprint},
+  bibtex_show  = {true},
+  author       = {{van Dijk}, Marten and Murat Bilgehan Ertan},
+  title        = {Trade-off Functions for {DP-SGD} with Subsampling based on Random Shuffling: Tight Upper and Lower Bounds},
+  journal      = {CoRR},
+  volume       = {abs/2605.06259},
+  year         = {2026},
+  abstract     = {We derive a tight analysis of the trade-off function for DP-SGD with subsampling based on random shuffling within the f-DP framework, in the regime where the noise multiplier sigma >= sqrt(3/ln M) with M the number of rounds in a single epoch. Unlike prior f-DP analyses for Poisson subsampling that yield implicit formulas, the random shuffling approach produces transparent and interpretable closed-form bounds. Using the Berry-Esseen theorem, we obtain bounds that are tight up to constant factors. For a single epoch (E=1) with delta=1/100 and sigma=1, we achieve a trade-off function >= 1 - a - delta with approximately M ~ 1.14 x 10^6 rounds and N ~ 1.14 x 10^7 training samples. We introduce a new proof technique based on a generalization of the law of large numbers: when E = c_M^2 M with c_M -> 0, the composed trade-off function approaches 1 - a uniformly, with delta having only O(sqrt(E)) dependency. We compare these results to the asymptotic behavior of Poisson subsampling and identify characterizing explicit convergence rates as an open question.},
+  arxiv        = {2605.06259},
+  html         = {https://arxiv.org/abs/2605.06259},
+  doi          = {10.48550/ARXIV.2605.06259}
+}
+
 @article{ertan2026fundamental,
   abbr         = {Preprint},
   bibtex_show  = {true},
