@@ -24,7 +24,10 @@ window.op("init", {
     if (!link) return;
     var href = link.getAttribute("href") || "";
     if (!DOWNLOAD_EXT.test(href)) return;
-    var file = link.href.split("/").pop().split("?")[0];
-    window.op("track", "file_download", { file: file, url: link.href });
+    var url = link.href.split("?")[0];
+    var file = url.split("/").pop();
+    // The CV gets its own dedicated event; everything else is a file_download.
+    var eventName = /cv\.pdf$/i.test(url) ? "cv_view" : "file_download";
+    window.op("track", eventName, { file: file, url: link.href });
   });
 })();
