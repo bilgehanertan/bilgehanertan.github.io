@@ -12,3 +12,19 @@ window.op("init", {
   trackOutgoingLinks: true,
   trackAttributes: true,
 });
+
+// Track file downloads (CV, papers, slides, posters, etc.).
+// Outgoing links are already tracked via trackOutgoingLinks; this adds a
+// dedicated "file_download" event for any downloadable file link (hosted or
+// external) so downloads show up as their own metric in Openpanel.
+(function () {
+  var DOWNLOAD_EXT = /\.(pdf|zip|docx?|pptx?|xlsx?|csv|tex|bib)(\?.*)?$/i;
+  document.addEventListener("click", function (e) {
+    var link = e.target && e.target.closest ? e.target.closest("a[href]") : null;
+    if (!link) return;
+    var href = link.getAttribute("href") || "";
+    if (!DOWNLOAD_EXT.test(href)) return;
+    var file = link.href.split("/").pop().split("?")[0];
+    window.op("track", "file_download", { file: file, url: link.href });
+  });
+})();
