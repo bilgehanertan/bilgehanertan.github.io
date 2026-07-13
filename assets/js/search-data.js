@@ -30,13 +30,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "nav-repositories",
-          title: "repositories",
-          description: "GitHub profiles and open-source repositories.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/repositories/";
-          },
         },{id: "teachings-guest-lecture-data-protection-technologies-course-university-of-amsterdam",
           title: 'Guest Lecture - Data Protection Technologies Course @ University of Amsterdam',
           description: "Master&#39;s-level course at University of Amsterdam",
