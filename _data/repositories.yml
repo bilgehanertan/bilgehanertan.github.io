@@ -1,4 +1,12 @@
 github_users:
   - bilgehanertan
+  - kirazai
+  - bogertaNET
+
+github_repos:
+  - bilgehanertan/paczero
+  - bilgehanertan/dpsgd-fundamental-limitations
+  - kirazai/sage-sps-mia
+  - bogertaNET/Unveiling-CTAs
 
 repo_description_lines_max: 2
