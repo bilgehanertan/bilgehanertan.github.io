@@ -1,3 +1,39 @@
 metadata:
-  last_updated: ''
-papers: {}
+  last_updated: '2026-07-13'
+papers:
+  ttpkyXEAAAAJ:9yKSN-GCB0IC:
+    citations: 0
+    title: A biologically inspired filter significance assessment method for model explanation
+    year: '2025'
+  ttpkyXEAAAAJ:W7OEmFMy1HYC:
+    citations: 0
+    title: 'Trade-off Functions for DP-SGD with Subsampling based on Random Shuffling: Tight Upper and Lower Bounds'
+    year: '2026'
+  ttpkyXEAAAAJ:WF5omc3nYNoC:
+    citations: 2
+    title: Fundamental Limitations of Favorable Privacy-Utility Guarantees for DP-SGD
+    year: '2026'
+  ttpkyXEAAAAJ:Y0pCki6q_DkC:
+    citations: 0
+    title: 'PACZero: PAC-Private Fine-Tuning of Language Models via Sign Quantization'
+    year: '2026'
+  ttpkyXEAAAAJ:YsMSGLbcyi4C:
+    citations: 0
+    title: 'Beyond Stop Signs: Why Evasion Attacks Matter Even More'
+    year: '2026'
+  ttpkyXEAAAAJ:d1gkVwhDpl0C:
+    citations: 0
+    title: 'Beyond Anonymization: Object Scrubbing for Privacy-Preserving 2D and 3D Vision Tasks'
+    year: '2025'
+  ttpkyXEAAAAJ:qjMakFHDy7sC:
+    citations: 1
+    title: On the Evidentiary Limits of Membership Inference for Copyright Auditing
+    year: '2026'
+  ttpkyXEAAAAJ:roLk4NBRz8UC:
+    citations: 1
+    title: 'TOSSS: a CVE-based Software Security Benchmark for Large Language Models'
+    year: '2026'
+  ttpkyXEAAAAJ:u5HHmVD_uO8C:
+    citations: 12
+    title: 'Unveiling Cyber Threat Actors: A Hybrid Deep Learning Approach for Behavior-based Attribution'
+    year: '2024'
