@@ -1,0 +1,64 @@
+name: Submit URLs to IndexNow
+
+# Notifies IndexNow-participating search engines (Bing, Yandex, Seznam,
+# Naver, DuckDuckGo, etc. — NOT Google) to crawl the site whenever it is
+# redeployed. Reads the live sitemap.xml and submits every URL in one batch.
+
+on:
+  workflow_run:
+    workflows: ["Deploy site"]
+    types:
+      - completed
+  workflow_dispatch:
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    # Skip if the deploy failed; always run on manual dispatch.
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Submit sitemap URLs to IndexNow
+        env:
+          KEY: a457ba5a3f17e3f16e6c256a95285fd9
+          HOST: bilgehanertan.github.io
+        run: |
+          set -euo pipefail
+
+          echo "⏳ Giving GitHub Pages a moment to serve the fresh deploy..."
+          sleep 30
+
+          echo "📥 Fetching sitemap from https://${HOST}/sitemap.xml ..."
+          curl -sSfL "https://${HOST}/sitemap.xml" -o sitemap.xml
+
+          echo "🔗 Extracting <loc> URLs..."
+          grep -oP '(?<=<loc>)[^<]+' sitemap.xml | sort -u > urls.txt
+          count=$(wc -l < urls.txt)
+          echo "Found ${count} URLs."
+          if [ "$count" -eq 0 ]; then
+            echo "::error::No URLs found in sitemap — aborting."
+            exit 1
+          fi
+
+          echo "📦 Building IndexNow payload..."
+          jq -Rn \
+            --arg host "$HOST" \
+            --arg key "$KEY" \
+            --arg keyLocation "https://${HOST}/${KEY}.txt" \
+            '{host: $host, key: $key, keyLocation: $keyLocation, urlList: [inputs]}' \
+            urls.txt > payload.json
+
+          echo "🚀 Submitting ${count} URLs to IndexNow..."
+          http_code=$(curl -sS -o response.txt -w "%{http_code}" \
+            -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            --data @payload.json)
+
+          echo "IndexNow HTTP status: ${http_code}"
+          cat response.txt || true
+          echo ""
+          echo "Submitted ${count} URLs to IndexNow (HTTP ${http_code})." >> "$GITHUB_STEP_SUMMARY"
+
+          case "$http_code" in
+            200|202) echo "✅ Success." ;;
+            *) echo "::error::IndexNow returned HTTP ${http_code}"; exit 1 ;;
+          esac
