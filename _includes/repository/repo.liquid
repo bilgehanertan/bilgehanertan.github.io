@@ -1,47 +1,42 @@
-{% assign repo_url = include.repository | split: '/' %}
-{% if site.data.repositories.github_users contains repo_url.first %}
-  {% assign show_owner = false %}
-{% else %}
-  {% assign show_owner = true %}
-{% endif %}
+{% assign repo_url = include.repository | split: "/" %}
 
-{% assign lang = site.lang | split: '-' | first %}
+<a
+  class="repo-card is-loading"
+  data-repo="{{ include.repository }}"
+  href="https://github.com/{{ include.repository }}"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="{{ include.repository }} on GitHub"
+>
+  <span class="repo-card-accent" aria-hidden="true"></span>
 
-{% case lang %}
-  {% when 'pt' %}
-    {% assign lang = site.lang %}
+  <div class="repo-card-head">
+    <span class="repo-card-owner">
+      <i class="fa-brands fa-github repo-card-owner-icon" aria-hidden="true"></i>
+      <span class="repo-card-owner-name">{{ repo_url[0] }}</span>
+    </span>
+    <span class="repo-card-badge">Public</span>
+  </div>
 
-  {% when 'zh' %}
-    {% assign lang_last = site.lang | split: '-' | last %}
-    {% case lang_last %}
-      {% when 'cn', 'sg', 'my', 'hans' %}
-        {% assign lang = 'cn' %}
-      {% when 'tw', 'hk', 'mo', 'hant' %}
-        {% assign lang = 'zh-tw' %}
-    {% endcase %}
+  <h3 class="repo-card-name">{{ repo_url[1] }}</h3>
 
-    {% comment %} Add a new language using when... if needed {% endcomment %}
-    {% comment %} If you still encounter language-display issues, check the available locale codes in github-readme-stats (different from ISO-639 standard used in your website) {% endcomment %}
-    {% comment %} https://github.com/anuraghazra/github-readme-stats?tab=readme-ov-file#available-locales {% endcomment %}
-{% endcase %}
+  <p class="repo-card-desc">
+    <span class="repo-skel repo-skel-line"></span>
+    <span class="repo-skel repo-skel-line is-short"></span>
+  </p>
 
-{% if site.data.repositories.repo_description_lines_max %}
-  {% assign max_lines = site.data.repositories.repo_description_lines_max %}
-{% else %}
-  {% assign max_lines = 2 %}
-{% endif %}
-
-<div class="repo p-2 text-center">
-  <a href="https://github.com/{{ include.repository }}">
-    <img
-      class="only-light w-100"
-      alt="{{ include.repository }}"
-      src="{{ site.external_services.github_readme_stats_url }}/api/pin/?username={{ repo_url[0] }}&repo={{ repo_url[1] }}&theme={{ site.repo_theme_light }}&locale={{ lang }}&show_owner={{ show_owner }}&description_lines_count={{ max_lines }}"
-    >
-    <img
-      class="only-dark w-100"
-      alt="{{ include.repository }}"
-      src="{{ site.external_services.github_readme_stats_url }}/api/pin/?username={{ repo_url[0] }}&repo={{ repo_url[1] }}&theme={{ site.repo_theme_dark }}&locale={{ lang }}&show_owner={{ show_owner }}&description_lines_count={{ max_lines }}"
-    >
-  </a>
-</div>
+  <div class="repo-card-meta">
+    <span class="repo-card-lang" hidden>
+      <span class="repo-card-lang-dot"></span>
+      <span class="repo-card-lang-name"></span>
+    </span>
+    <span class="repo-card-stat repo-card-stars" title="Stars">
+      <i class="fa-solid fa-star" aria-hidden="true"></i>
+      <span class="repo-card-stars-count">—</span>
+    </span>
+    <span class="repo-card-stat repo-card-forks" title="Forks">
+      <i class="fa-solid fa-code-fork" aria-hidden="true"></i>
+      <span class="repo-card-forks-count">—</span>
+    </span>
+  </div>
+</a>

@@ -1,12 +1,14 @@
-github_users:
-  - bilgehanertan
-  - kirazai
-  - bogertaNET
-
+# Repositories shown on /repositories/.
+# Cards are rendered client-side from the public GitHub API
+# (see _pages/repositories.md), so ANY owner/repo across ANY
+# organization works — just list them as "owner/repo".
 github_repos:
-  - bilgehanertan/paczero
-  - bilgehanertan/dpsgd-fundamental-limitations
-  - kirazai/sage-sps-mia
+  - huggingface/huggingface_hub
+  - huggingface/lighteval
   - bogertaNET/Unveiling-CTAs
+  - kiraz-ai/sage-sps-mia
+  - bilgehanertan/dpsgd-fundamental-limitations
+  - bilgehanertan/paczero
 
+# Max lines of description shown on a card before it is clamped.
 repo_description_lines_max: 2
