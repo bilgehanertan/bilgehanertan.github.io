@@ -4,7 +4,7 @@ permalink: /repositories/
 title: repositories
 description: Open-source projects I build and contribute to across different organizations.
 nav: true
-nav_order: 4
+nav_order: 3
 ---
 
 <div class="repo-grid">
