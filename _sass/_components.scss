@@ -215,39 +215,6 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
-// Social (about-page header — smaller & left-aligned)
-.social-header {
-  margin-top: 0.7rem;
-  text-align: left;
-  font-size: 1.4rem;
-  line-height: 1;
-
-  a {
-    display: inline-block;
-    margin-right: 0.7rem;
-
-    img,
-    svg {
-      width: 1.4rem;
-      height: 1.4rem;
-      margin-bottom: 0;
-    }
-
-    i::before {
-      color: var(--global-text-color);
-      transition-property: all 0.2s ease-in-out;
-    }
-
-    &:hover {
-      text-decoration: none;
-
-      i::before {
-        color: var(--global-theme-color);
-      }
-    }
-  }
-}
-
 .wechat-modal {
   display: none;
   position: fixed;
