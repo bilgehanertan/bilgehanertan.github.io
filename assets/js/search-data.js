@@ -23,19 +23,19 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
-        },{id: "nav-cv",
-          title: "CV",
-          description: "Curriculum Vitae",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/cv/";
-          },
         },{id: "nav-repositories",
           title: "repositories",
           description: "Open-source projects I build and contribute to across different organizations.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/repositories/";
+          },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "Curriculum Vitae",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
           },
         },{id: "teachings-guest-lecture-data-protection-technologies-course-university-of-amsterdam",
           title: 'Guest Lecture - Data Protection Technologies Course @ University of Amsterdam',
