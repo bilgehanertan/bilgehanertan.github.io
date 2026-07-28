@@ -14,7 +14,7 @@ footer_text: >
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 keywords: security, privacy, machine-learning, differential-privacy, academic-website, privacy-preserving-machine-learning, DP-SGD, f-DP, PAC-privacy, membership-inference-attacks, adversarial-machine-learning, large-language-models, deep-learning, explainable-AI, machine-learning-security, data-anonymization, CWI, trustworthy-machine-learning, ai-safety
 lang: en
-icon: favicon.ico # image in /assets/img/
+icon: favicon.png # image in /assets/img/
 
 url: https://bilgehanertan.github.io
 baseurl: "" # leave blank for personal site
