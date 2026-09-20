@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: PhD Student, <a href='https://www.cwi.nl/en/groups/computer-security/'>CWI Amsterdam</a>
+subtitle: PhD Student in AI Safety & Privacy, <a href='https://www.cwi.nl/en/groups/computer-security/'>CWI Amsterdam</a>
 
 profile:
   align: right
@@ -25,10 +25,10 @@ latest_posts:
   limit: 3
 ---
 
-I am Murat Bilgehan Ertan, a researcher at the intersection of security, privacy, and machine learning, currently pursuing my PhD at [CWI](https://www.cwi.nl/en/groups/computer-security/) (Centrum Wiskunde & Informatica) in Amsterdam under the supervision of Prof. [Marten van Dijk](https://www.cwi.nl/en/people/marten-van-dijk).
+I am Murat Bilgehan Ertan, a researcher at the intersection of AI safety, privacy, and machine learning, currently pursuing my PhD at [CWI](https://www.cwi.nl/en/groups/computer-security/) (Centrum Wiskunde & Informatica) in Amsterdam under the supervision of Prof. [Marten van Dijk](https://www.cwi.nl/en/people/marten-van-dijk).
 
 I hold a BSc in Computer Science and Engineering from [Sabancı University](https://sabanciuniv.edu), Türkiye, and an MSc in Computer Security (cum laude) from [Vrije Universiteit Amsterdam](https://vu.nl). Beyond my academic research, I have professional experience as a Security Researcher and Developer at [PRODAFT](https://prodaft.com).
 
-My research focuses on building secure and privacy-preserving learning systems, combining theoretical analysis with practical engineering. I study how information leaks and adversarial behavior arise in modern AI, developing formal frameworks based on Differential Privacy, f-DP, and PAC privacy to understand and bound these effects. In parallel, I work on adversarial and membership inference attacks on large language models to evaluate and strengthen their real-world resilience.
+My research focuses on building safe, secure, and privacy-preserving learning systems, combining theoretical analysis with practical engineering. I study how information leaks and adversarial behavior arise in modern AI, developing formal frameworks based on Differential Privacy, f-DP, and PAC privacy to understand and bound these effects. More recently, my work has expanded from privacy toward the broader question of AI safety. Together with Prof. [Srini Devadas](https://people.csail.mit.edu/devadas/) at MIT, I study certified defenses against data poisoning in LLM post-training, as well as the robustness of refusal behavior against jailbreak attacks. In parallel, I work on adversarial and membership inference attacks on large language models to evaluate and strengthen their real-world resilience.
 
-I'm broadly interested in how we can make machine learning systems secure, private, and reliable without losing their practical value.
+I'm broadly interested in how we can make machine learning systems safe, secure, and private while remaining practically useful.
