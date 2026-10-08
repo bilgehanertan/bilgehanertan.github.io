@@ -1,23 +1,6 @@
 ---
 ---
 
-@article{mahmood2026beyond,
-  abbr         = {IEEE S&P},
-  bibtex_show  = {true},
-  selected     = {true},
-  author       = {Mahmood, Kaleel and Ertan, Murat Bilgehan and {van Dijk}, Marten},
-  title        = {Beyond Stop Signs: Why Evasion Attacks Matter Even More},
-  journal      = {IEEE Security \& Privacy},
-  volume       = {24},
-  number       = {3},
-  pages        = {65--70},
-  year         = {2026},
-  publisher    = {IEEE},
-  html         = {https://ieeexplore.ieee.org/abstract/document/11519507/},
-  google_scholar_id = {YsMSGLbcyi4C},
-  preview        = {beyond-stop-signs.png}
-}
-
 @article{ertan2026paczero,
   abbr         = {Preprint},
   bibtex_show  = {true},
@@ -35,22 +18,6 @@
   preview        = {paczero.png}
 }
 
-@article{vandijk2026tradeoff,
-  abbr         = {Preprint},
-  bibtex_show  = {true},
-  author       = {{van Dijk}, Marten and Murat Bilgehan Ertan},
-  title        = {Trade-off Functions for {DP-SGD} with Subsampling based on Random Shuffling: Tight Upper and Lower Bounds},
-  journal      = {CoRR},
-  volume       = {abs/2605.06259},
-  year         = {2026},
-  abstract     = {We derive a tight analysis of the trade-off function for DP-SGD with subsampling based on random shuffling within the f-DP framework, in the regime where the noise multiplier sigma >= sqrt(3/ln M) with M the number of rounds in a single epoch. Unlike prior f-DP analyses for Poisson subsampling that yield implicit formulas, the random shuffling approach produces transparent and interpretable closed-form bounds. Using the Berry-Esseen theorem, we obtain bounds that are tight up to constant factors. For a single epoch (E=1) with delta=1/100 and sigma=1, we achieve a trade-off function >= 1 - a - delta with approximately M ~ 1.14 x 10^6 rounds and N ~ 1.14 x 10^7 training samples. We introduce a new proof technique based on a generalization of the law of large numbers: when E = c_M^2 M with c_M -> 0, the composed trade-off function approaches 1 - a uniformly, with delta having only O(sqrt(E)) dependency. We compare these results to the asymptotic behavior of Poisson subsampling and identify characterizing explicit convergence rates as an open question.},
-  arxiv        = {2605.06259},
-  html         = {https://arxiv.org/abs/2605.06259},
-  doi          = {10.48550/ARXIV.2605.06259},
-  google_scholar_id = {W7OEmFMy1HYC},
-  preview        = {tradeoff-dpsgd.png}
-}
-
 @article{ertan2026fundamental,
   abbr         = {Preprint},
   bibtex_show  = {true},
@@ -66,6 +33,55 @@
   doi          = {10.48550/ARXIV.2601.10237},
   google_scholar_id = {WF5omc3nYNoC},
   preview        = {fundamental-dpsgd.png}
+}
+
+@article{ertan2026closedform,
+  abbr         = {Preprint},
+  bibtex_show  = {true},
+  selected     = {true},
+  author       = {Murat Bilgehan Ertan and {van Dijk}, Marten},
+  title        = {{Closed-Form} Noise Calibration Against Membership Inference for {Random-Allocation} {DP-SGD}},
+  journal      = {CoRR},
+  volume       = {abs/2610.09651},
+  year         = {2026},
+  abstract     = {DP-SGD protects training data by adding Gaussian noise to clipped gradients. The amount of noise is usually chosen by running a numerical privacy accountant inside a search. We study DP-SGD with random allocation, where each epoch uses every record once, at a randomly chosen step. For this setting we give a one-line formula that bounds the accuracy of every membership inference attack (MIA) on the trained model. With M steps per epoch, E epochs and noise multiplier sigma, and with membership and non-membership equally likely a priori, the attack accuracy is at most 1/2 + (1/4) sqrt((1 + (exp(1/sigma^2) - 1)/M)^E - 1). The formula comes from the chi-square divergence between a Gaussian distribution and a Gaussian mixture that dominates random allocation. It is interpretable and gives sigma in about a microsecond. Where applicable, our formula needs at most about half the noise of the state-of-the-art closed-form bound. To measure how close the bound is, we also derive an exact expression for the attack accuracy of these two distributions and evaluate it numerically. Calibrating to this exact expression requires 13.0% to 20.2% less noise than the formula in our main experiments, and since it is exact, no accountant that knows only M, E and sigma can certify a smaller sigma. In training, the resulting sigma outperforms the formula and matches a published accountant in test accuracy. It is found in seconds and certified in minutes, whereas every search we ran with that accountant took longer or returned at least 0.62% more noise. We show that MIAs on the trained models stay below the bound.},
+  arxiv        = {2610.09651},
+  html         = {https://arxiv.org/abs/2610.09651},
+  doi          = {10.48550/ARXIV.2610.09651},
+  preview        = {closedform.png}
+}
+
+@article{mahmood2026beyond,
+  abbr         = {IEEE S&P},
+  bibtex_show  = {true},
+  selected     = {true},
+  author       = {Mahmood, Kaleel and Ertan, Murat Bilgehan and {van Dijk}, Marten},
+  title        = {Beyond Stop Signs: Why Evasion Attacks Matter Even More},
+  journal      = {IEEE Security \& Privacy},
+  volume       = {24},
+  number       = {3},
+  pages        = {65--70},
+  year         = {2026},
+  publisher    = {IEEE},
+  html         = {https://ieeexplore.ieee.org/abstract/document/11519507/},
+  google_scholar_id = {YsMSGLbcyi4C},
+  preview        = {beyond-stop-signs.png}
+}
+
+@article{vandijk2026tradeoff,
+  abbr         = {Preprint},
+  bibtex_show  = {true},
+  author       = {{van Dijk}, Marten and Murat Bilgehan Ertan},
+  title        = {Trade-off Functions for {DP-SGD} with Subsampling based on Random Allocation: Tight Upper and Lower Bounds},
+  journal      = {CoRR},
+  volume       = {abs/2605.06259},
+  year         = {2026},
+  abstract     = {Within the f-DP framework, we derive a tight analysis of the trade-off function for Differentially Private Stochastic Gradient Descent (DP-SGD) with subsampling based on random allocation, in which each sample is independently assigned to exactly one of M minibatches per epoch, each minibatch corresponding to one of the M SGD rounds within a single epoch. Our analysis holds under an explicit validity condition, whose hypotheses together force sigma >= sqrt(3/ln M), where sigma is the DP noise multiplier. Unlike f-DP analyses for Poisson subsampling, which yield non-closed implicit formulas that can be machine computed but are non-transparent, random allocation admits a tight analysis yielding transparent and interpretable closed-form bounds. For a single epoch, our concrete bounds, derived via the Berry-Esseen theorem, are tight up to constant factors. We demonstrate worked parameter settings for a single epoch (E=1) with a corresponding trade-off function >= 1 - a - delta, that is, only delta below the ideal random guessing diagonal 1 - a. For delta = 1/100 and sigma = 1, roughly M ~ 1.14 x 10^6 rounds and N ~ 1.14 x 10^7 training samples suffice to achieve meaningful differential privacy. This is in contrast to recent negative results for the regime sigma <= 1/sqrt(2 ln M) for which no significant DP guarantee can exist.},
+  arxiv        = {2605.06259},
+  html         = {https://arxiv.org/abs/2605.06259},
+  doi          = {10.48550/ARXIV.2605.06259},
+  google_scholar_id = {W7OEmFMy1HYC},
+  preview        = {tradeoff-dpsgd.png}
 }
 
 @article{ertan2026evidentiary,
