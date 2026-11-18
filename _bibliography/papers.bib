@@ -12,8 +12,6 @@
   year         = {2026},
   abstract     = {We introduce PACZero, a suite of PAC-private zeroth-order mechanisms for fine-tuning large language models that delivers usable utility at I(S*; Y_{1:T}) = 0, providing membership-inference resistance comparable to differential privacy only at extreme noise levels. The key idea is to sign-quantize subset-aggregated zeroth-order gradients to induce frequent unanimity—instances where candidate subsets agree on update directions—which incurs zero conditional mutual information cost. Two variants balance the privacy-utility spectrum: PACZero-MI (budgeted mutual information) and PACZero-ZPL (zero mutual information through randomized disagreement handling). Experiments on SST-2 and SQuAD with OPT models demonstrate competitive performance in high-privacy regimes where prior methods struggle.},
   arxiv        = {2605.06505},
-  html         = {https://arxiv.org/abs/2605.06505},
-  doi          = {10.48550/ARXIV.2605.06505},
   google_scholar_id = {Y0pCki6q_DkC},
   preview        = {paczero.png}
 }
@@ -30,7 +28,6 @@
   publisher    = {Association for Computing Machinery},
   abstract     = {This work establishes fundamental limitations of favorable privacy-utility guarantees for DP-SGD, providing theoretical analysis of the inherent trade-offs in differentially private stochastic gradient descent.},
   arxiv        = {2601.10237},
-  html         = {https://dl.acm.org/doi/10.1145/3830454.3832629},
   doi          = {10.1145/3830454.3832629},
   award_name   = {🏆 Distinguished Paper Award},
   award        = {Distinguished Paper Award at ACM CCS 2026.},
@@ -49,8 +46,6 @@
   year         = {2026},
   abstract     = {DP-SGD protects training data by adding Gaussian noise to clipped gradients. The amount of noise is usually chosen by running a numerical privacy accountant inside a search. We study DP-SGD with random allocation, where each epoch uses every record once, at a randomly chosen step. For this setting we give a one-line formula that bounds the accuracy of every membership inference attack (MIA) on the trained model. With M steps per epoch, E epochs and noise multiplier sigma, and with membership and non-membership equally likely a priori, the attack accuracy is at most 1/2 + (1/4) sqrt((1 + (exp(1/sigma^2) - 1)/M)^E - 1). The formula comes from the chi-square divergence between a Gaussian distribution and a Gaussian mixture that dominates random allocation. It is interpretable and gives sigma in about a microsecond. Where applicable, our formula needs at most about half the noise of the state-of-the-art closed-form bound. To measure how close the bound is, we also derive an exact expression for the attack accuracy of these two distributions and evaluate it numerically. Calibrating to this exact expression requires 13.0% to 20.2% less noise than the formula in our main experiments, and since it is exact, no accountant that knows only M, E and sigma can certify a smaller sigma. In training, the resulting sigma outperforms the formula and matches a published accountant in test accuracy. It is found in seconds and certified in minutes, whereas every search we ran with that accountant took longer or returned at least 0.62% more noise. We show that MIAs on the trained models stay below the bound.},
   arxiv        = {2610.09651},
-  html         = {https://arxiv.org/abs/2610.09651},
-  doi          = {10.48550/ARXIV.2610.09651},
   preview        = {closedform.png}
 }
 
@@ -66,7 +61,7 @@
   pages        = {65--70},
   year         = {2026},
   publisher    = {IEEE},
-  html         = {https://ieeexplore.ieee.org/abstract/document/11519507/},
+  doi          = {10.1109/MSEC.2026.3668435},
   google_scholar_id = {YsMSGLbcyi4C},
   preview        = {beyond-stop-signs.png}
 }
@@ -81,8 +76,6 @@
   year         = {2026},
   abstract     = {Within the f-DP framework, we derive a tight analysis of the trade-off function for Differentially Private Stochastic Gradient Descent (DP-SGD) with subsampling based on random allocation, in which each sample is independently assigned to exactly one of M minibatches per epoch, each minibatch corresponding to one of the M SGD rounds within a single epoch. Our analysis holds under an explicit validity condition, whose hypotheses together force sigma >= sqrt(3/ln M), where sigma is the DP noise multiplier. Unlike f-DP analyses for Poisson subsampling, which yield non-closed implicit formulas that can be machine computed but are non-transparent, random allocation admits a tight analysis yielding transparent and interpretable closed-form bounds. For a single epoch, our concrete bounds, derived via the Berry-Esseen theorem, are tight up to constant factors. We demonstrate worked parameter settings for a single epoch (E=1) with a corresponding trade-off function >= 1 - a - delta, that is, only delta below the ideal random guessing diagonal 1 - a. For delta = 1/100 and sigma = 1, roughly M ~ 1.14 x 10^6 rounds and N ~ 1.14 x 10^7 training samples suffice to achieve meaningful differential privacy. This is in contrast to recent negative results for the regime sigma <= 1/sqrt(2 ln M) for which no significant DP guarantee can exist.},
   arxiv        = {2605.06259},
-  html         = {https://arxiv.org/abs/2605.06259},
-  doi          = {10.48550/ARXIV.2605.06259},
   google_scholar_id = {W7OEmFMy1HYC},
   preview        = {tradeoff-dpsgd.png}
 }
@@ -98,8 +91,6 @@
   year         = {2026},
   abstract     = {This work examines the evidentiary limits of membership inference attacks for copyright auditing, questioning their reliability as evidence of unauthorized training data usage.},
   arxiv        = {2601.12937},
-  html         = {https://arxiv.org/abs/2601.12937},
-  doi          = {10.48550/ARXIV.2601.12937},
   google_scholar_id = {qjMakFHDy7sC},
   preview        = {evidentiary-limits.png}
 }
@@ -115,7 +106,6 @@
   publisher    = {Association for Computing Machinery},
   abstract     = {TOSSS is a CVE-based software security benchmark designed to evaluate the capabilities of large language models in identifying and reasoning about software vulnerabilities.},
   arxiv        = {2603.10969},
-  html         = {https://dl.acm.org/doi/10.1145/3806007.3810968},
   doi          = {10.1145/3806007.3810968},
   google_scholar_id = {roLk4NBRz8UC},
   preview        = {tosss.png}
@@ -131,8 +121,6 @@
   year         = {2025},
   abstract     = {We introduce ROAR (Robust Object Removal and Re-annotation), a scalable framework for privacy-preserving dataset obfuscation that removes sensitive objects instead of modifying them. Designed for practical deployment, our method integrates instance segmentation with generative inpainting to eliminate identifiable entities while preserving scene integrity. Extensive evaluations on 2D COCO-based object detection show that ROAR achieves 87.5% of baseline average precision (AP), whereas image dropping achieves only 74.2%, highlighting the advantage of scrubbing in preserving dataset utility. In NeRF-based 3D reconstruction, our method incurs a PSNR loss of at most 1.66 dB while maintaining SSIM and improving LPIPS, demonstrating superior perceptual quality.},
   arxiv        = {2504.16557},
-  html         = {https://arxiv.org/abs/2504.16557},
-  doi          = {10.48550/ARXIV.2504.16557},
   google_scholar_id = {d1gkVwhDpl0C},
   preview        = {beyond-anonymization.png}
 }
@@ -150,7 +138,7 @@
   isbn         = {978-3-032-08324-1},
   year         = {2025},
   abstract     = {The interpretability of deep learning models remains a significant challenge, particularly in convolutional neural networks (CNNs) where understanding the contributions of individual filters is crucial for explainability. In this work, we propose a biologically inspired filter significance assessment method based on Steady-State Visually Evoked Potentials (SSVEPs), a well-established neuroscience principle. Our approach leverages frequency tagging techniques to quantify the importance of convolutional filters by analyzing their frequency-locked responses to periodic contrast modulations in input images. By blending SSVEP-based filter selection into Class Activation Mapping (CAM) frameworks such as Grad-CAM, Grad-CAM++, EigenCAM, and LayerCAM, we enhance model interpretability while reducing attribution noise.},
-  html         = {https://link.springer.com/chapter/10.1007/978-3-032-08324-1_19},
+  doi          = {10.1007/978-3-032-08324-1_19},
   google_scholar_id = {9yKSN-GCB0IC},
   preview        = {biologically-inspired.png}
 }
@@ -166,7 +154,6 @@
   address      = {New York, NY, USA},
   doi          = {10.1145/3676284},
   abstract     = {In this paper, we leverage natural language processing and machine learning algorithms to profile threat actors based on their behavioral signatures to establish identification for soft attribution. Our unique dataset comprises various actors and the commands they have executed, with a significant proportion using the Cobalt Strike framework in August 2020-October 2022. We implemented a hybrid deep learning structure combining transformers and convolutional neural networks to benefit global and local contextual information within the sequence of commands, which provides a detailed view of the behavioral patterns of threat actors.},
-  html         = {https://doi.org/10.1145/3676284},
   google_scholar_id = {u5HHmVD_uO8C},
   preview        = {unveiling-cyber.png}
 }
